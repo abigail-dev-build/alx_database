@@ -5,7 +5,10 @@
 -- You can use only one SELECT statement
 -- The database name will be passed as an argument of the mysql command
 
-SELECT cities.id, cities.name AS city_name, states.name AS state_name
+SELECT cities.id, cities.name, states.name
 FROM cities
 JOIN states ON cities.state_id = states.id
 ORDER BY cities.id ASC;
+
+-- cities.id - cities.name - states.name
+-- AS city_name, AS state_name

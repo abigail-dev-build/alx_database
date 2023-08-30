@@ -7,5 +7,4 @@
 
 SELECT id INTO @STATE_ID FROM states WHERE name = 'California';
 
-SELECT * FROM cities WHERE state_id = @STATE_ID ORDER BY id ASC;
-
+SELECT name FROM cities WHERE state_id = @STATE_ID ORDER BY id ASC;
