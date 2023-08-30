@@ -5,5 +5,7 @@
 -- You are not allowed to use the JOIN keyword
 -- The database name will be passed as an argument of the mysql command
 
--- SELECT id FROM states WHERE name = 'California';
-SELECT * FROM cities WHERE state_id = (SELECT id FROM states WHERE name = 'California';) ORDER BY id ASC;
+SELECT id INTO @STATE_ID FROM states WHERE name = 'California';
+
+SELECT * FROM cities WHERE state_id = @STATE_ID ORDER BY id ASC;
+
